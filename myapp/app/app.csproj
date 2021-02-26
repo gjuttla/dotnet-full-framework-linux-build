@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net35;net45;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net35;net45</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
