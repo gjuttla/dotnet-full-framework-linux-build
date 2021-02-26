@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace net35app
+namespace app
 {
     class Program
     {
