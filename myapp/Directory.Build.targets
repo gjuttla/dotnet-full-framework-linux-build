@@ -1,24 +1,26 @@
 <Project>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net35' ">
+  <ItemGroup Condition=" $([MSBuild]::IsOSPlatform('Linux')) And 
+                        '$(TargetFramework)' == 'net35' ">
     <PackageReference Include="jnm2.ReferenceAssemblies.net35" Version="1.0.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net40'  Or 
-                         '$(TargetFramework)' == 'net403' Or
-                         '$(TargetFramework)' == 'net45'  Or
-                         '$(TargetFramework)' == 'net451' Or
-                         '$(TargetFramework)' == 'net452' Or
-                         '$(TargetFramework)' == 'net46'  Or
-                         '$(TargetFramework)' == 'net461' Or
-                         '$(TargetFramework)' == 'net462' Or
-                         '$(TargetFramework)' == 'net47'  Or
-                         '$(TargetFramework)' == 'net471' Or
-                         '$(TargetFramework)' == 'net472' Or
-                         '$(TargetFramework)' == 'net48' ">
+  <ItemGroup Condition=" $([MSBuild]::IsOSPlatform('Linux')) And 
+                        ( '$(TargetFramework)' == 'net40'  Or 
+                          '$(TargetFramework)' == 'net403' Or
+                          '$(TargetFramework)' == 'net45'  Or
+                          '$(TargetFramework)' == 'net451' Or
+                          '$(TargetFramework)' == 'net452' Or
+                          '$(TargetFramework)' == 'net46'  Or
+                          '$(TargetFramework)' == 'net461' Or
+                          '$(TargetFramework)' == 'net462' Or
+                          '$(TargetFramework)' == 'net47'  Or
+                          '$(TargetFramework)' == 'net471' Or
+                          '$(TargetFramework)' == 'net472' Or
+                          '$(TargetFramework)' == 'net48' ) ">
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
