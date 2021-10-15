@@ -8,7 +8,7 @@ WORKDIR /myapp
 RUN dotnet restore myapp.sln
 RUN dotnet publish ./app/app.csproj -o bin -f $FX
 
-FROM mono 
+FROM mono
 
 RUN mkdir /myapp
 WORKDIR /myapp
